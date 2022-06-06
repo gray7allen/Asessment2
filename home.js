@@ -27,7 +27,8 @@ let greetUser = username => {
 }
 console.log(greetUser('Andrew'))
 
-
+// let greetUser = (username) => {return `Welcome back, ${username}`}
+// console.log(greetUser('Andrew'))
 
 
 //////////////////PROBLEM 2////////////////////
@@ -50,6 +51,7 @@ console.log(greetUser('Andrew'))
         // `You're in our delivery zone!`
 */
 
+// My Code
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 function canWeDeliver(zipCode) {
@@ -63,6 +65,17 @@ function canWeDeliver(zipCode) {
 console.log(canWeDeliver(85206)) // yes 
 console.log(canWeDeliver(99999)) // no
 
+
+// Other Code
+// function canWeDeliver(zipCode) {
+//     if (deliveryAreaZipCodes.uncludes(zipCode)){
+//         return "You're in our delivery zone!"
+//     } else {
+//         return "Sorry, we can't deliver to that address"
+//     }
+// }
+// console.log(canWeDeliver(85205))
+// console.log(canWeDeliver(84043))
 
 /* 
     Problem 2 Continued
@@ -81,15 +94,28 @@ console.log(canWeDeliver(99999)) // no
     Name your new function `canWeDeliverTwo`.
 */
 
-let canWeDeliverTwo = (zipCode, callback) => {
-    for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
-      if (arr[i].deliveryAreaZipCodes === zipCode) {
-        return callback(console.log("You're in our delivery!"))
-      } else {
-          return callback(console.log("Sorry, we can't deliver to that address"))
+// My Code
+// let canWeDeliverTwo = (zipCode, callback) => {
+//     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+//       if (arr[i].deliveryAreaZipCodes === zipCode) {
+//         return callback(console.log("You're in our delivery!"))
+//       } else {
+//           return callback(console.log("Sorry, we can't deliver to that address")) //would never get here
+//       }
+//     }
+//   }
+
+  // Correct Code
+  function canWeDeliverTwo(zipCode) {
+      for (let i =0; i < deliveryAreaZipCodes.length; i++) {
+          if (deliveryAreaZipCodes[i] === zipCode) {
+              return "You're in our delivery zone!"
+          }
       }
-    }
+      return "Sorry, we can't deliver to that address"
   }
+  console.log(canWeDeliverTwo(99999))
+  console.log(canWeDeliverTwo(85204))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -124,10 +150,13 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-const deals = deals.replace('15' ,'10')
+// My Code
+// const deals = deals.replace('15' ,'10')
+// console.log(deals)
+
+// Correct Code
+deals[0].title = deals[0].title.replace('15', '10')
 console.log(deals)
-
-
 
 /*
     The restaurant is going to continue its
@@ -142,5 +171,10 @@ console.log(deals)
     to be displaying wrong on the live site.
 */
 
-const deals = deals.replace('March', 'April')
+// My Code
+// const deals = deals.replace('March', 'April')
+// console.log(deals)
+
+// Correct Code
+deals[1].desc = deals[1].desc.replace('March', 'April').trim()
 console.log(deals)

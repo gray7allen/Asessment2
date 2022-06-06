@@ -30,16 +30,25 @@
     'kids'
 */
 
+// My Code
+// let pizza = {
+//     name: ['cheese', 'pepperoni', 'wings', 'fries'],
+//     price: [7, 8, 5, 3],
+//     category: ['entree', 'entree', 'side', 'side'],
+//     popularity: [ 3, 1, 4, 2],
+//     rating: [7/10, 9/10, 6/10, 8/10],
+//     tags: ['cheap', 'good', 'hot']
+// }
+
+// Code
 let pizza = {
-    name: ['cheese', 'pepperoni', 'wings', 'fries'],
-    price: [7, 8, 5, 3],
-    category: ['entree', 'entree', 'side', 'side'],
-    popularity: [ 3, 1, 4, 2],
-    rating: [7/10, 9/10, 6/10, 8/10],
-    tags: ['cheap', 'good', 'hot']
+    name:'pepperoni pizza', 
+    price: 7,
+    category: 'entree',
+    popularity: 9.5,
+    rating: 7,
+    tags: ['family', 'kids', 'popular']  
 }
-
-
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -49,8 +58,13 @@ let pizza = {
     Use dot notation to access the value.
 */
 
-let popularity = pizza.popularity
-console.log(popularity)
+// My Code
+// let popularity = pizza.popularity
+// console.log(popularity)
+
+// Correct Code
+let pizzaPop = pizza.popularity
+console.log(pizzaPop)
 
 
 /*
@@ -60,8 +74,13 @@ console.log(popularity)
     get the value.
 */
 
-let tags = pizza.tags
-console.log(tags[1,1])
+// My Code
+// let tags = pizza.tags
+// console.log(tags[1,1])
+
+// Correct Code
+let secondPizzaTag = pizza.tags[1]
+console.log(secondPizzaTag)
 
 
 /*
@@ -71,16 +90,22 @@ console.log(tags[1,1])
     Print the value of your new price variable.
 */
 
-let pizzaPrices = {
-    cheese: 7,
-    pepperoni: 8,
-}
+// My Code   ..... oof
+// let pizzaPrices = {
+//     cheese: 7,
+//     pepperoni: 8,
+// }
 
-function newPrice(pizzaPrices) {
-    let {cheese, pepperoni} = pizzaPrices
-    return cheese + pepperoni
-}
-console.log(newPrice(pizzaPrices))
+// function newPrice(pizzaPrices) {
+//     let {cheese, pepperoni} = pizzaPrices
+//     return cheese + pepperoni
+// }
+// console.log(newPrice(pizzaPrices))
+
+// Correct Code
+let {price} = pizza
+//let price = pizza.price  <--- same thing
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -89,16 +114,21 @@ console.log(newPrice(pizzaPrices))
     Print the value of your category variable. 
 */
 
-let foodCategories = {
-    entree: 'entree, ',
-    side: 'side',
-}
+// My Code .... ooof again
+// let foodCategories = {
+//     entree: 'entree, ',
+//     side: 'side',
+// }
 
-function newCategories(foodCategories) {
-    let {entree, side} = foodCategories
-    return entree + side
-}
-console.log(newCategories(foodCategories))
+// function newCategories(foodCategories) {
+//     let {entree, side} = foodCategories
+//     return entree + side
+// }
+// console.log(newCategories(foodCategories))
+
+// Correct Code
+let {category} = pizza
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -113,52 +143,96 @@ console.log(newCategories(foodCategories))
     data in some functions that you'll write.
 */
 
-let burger = {
-    name: ['plain', 'cheeseburger', 'BLT'],
-    price: [4, 5, 6],
-    category: ['entree', 'entree', 'entree'],
-    popularity: [ 3, 2, 1],
-    rating: [7/10, 8/10, 9/10],
-    tags: ['sandwich', 'grilled', 'fresh']
-}
+// My Code
+// let burger = {
+//     name: ['plain', 'cheeseburger', 'BLT'],
+//     price: [4, 5, 6],
+//     category: ['entree', 'entree', 'entree'],
+//     popularity: [ 3, 2, 1],
+//     rating: [7/10, 8/10, 9/10],
+//     tags: ['sandwich', 'grilled', 'fresh']
+// }
 
-let chxSando = {
-    name: ['fried chx', 'grilled chx'],
-    price: [7],
-    category: ['entree', 'entree'],
-    popularity: [1],
-    rating: [9/10, 7/10],
-    tags: ['crispy', 'delicious', 'sandwich']
-}
+// let chxSando = {
+//     name: ['fried chx', 'grilled chx'],
+//     price: [7],
+//     category: ['entree', 'entree'],
+//     popularity: [1],
+//     rating: [9/10, 7/10],
+//     tags: ['crispy', 'delicious', 'sandwich']
+// }
 
-let macNCheese = {
-    name: ['Mac N Cheese'],
-    price: [4],
-    category: ['side'],
-    popularity: [1,],
-    rating: [10/10],
-    tags: ['best', 'cheesey', 'side']
-}
+// let macNCheese = {
+//     name: ['Mac N Cheese'],
+//     price: [4],
+//     category: ['side'],
+//     popularity: [1,],
+//     rating: [10/10],
+//     tags: ['best', 'cheesey', 'side']
+// }
 
-let fries = {
-    name: ['plain', 'cheese fries', 'loaded fries'],
-    price: [2, 3, 5],
-    category: ['side', 'side', 'side'],
-    popularity: [ 1, 3, 2],
-    rating: [8/10, 6/10, 7/10],
-    tags: ['made to order', 'side', 'fries']
-}
+// let fries = {
+//     name: ['plain', 'cheese fries', 'loaded fries'],
+//     price: [2, 3, 5],
+//     category: ['side', 'side', 'side'],
+//     popularity: [ 1, 3, 2],
+//     rating: [8/10, 6/10, 7/10],
+//     tags: ['made to order', 'side', 'fries']
+// }
 
-let chxTenders = {
-    name: ['chicken tenders'],
-    price: [6],
-    category: ['entree'],
-    popularity: [1],
-    rating: [9/10],
-    tags: ['value', 'kids']
-}
+// let chxTenders = {
+//     name: ['chicken tenders'],
+//     price: [6],
+//     category: ['entree'],
+//     popularity: [1],
+//     rating: [9/10],
+//     tags: ['value', 'kids']
+// }
 
-let foodArr = [burger, chxSando, macNCheese, fries, chxTenders]
+// let foodArr = [burger, chxSando, macNCheese, fries, chxTenders]
+
+let foodArr = [
+    {
+        name:'pepperoni pizza', 
+        price: 7,
+        category: 'entree',
+        popularity: 9.5,
+        rating: 7,
+        tags: ['family', 'kids', 'popular', 'high sodium'],
+    },
+    {
+        name:'sardines', 
+        price: 2,
+        category: 'ingredient',
+        popularity: 2,
+        rating: 6,
+        tags: ['fish', 'high sodium', 'unpopular'],
+    },
+    {
+        name:'bean burrito', 
+        price: 2,
+        category: 'entree',
+        popularity: 7,
+        rating: 4,
+        tags: ['fast food', 'high fiber', 'popular'],
+    },
+    {
+        name:'celery', 
+        price: 1,
+        category: 'appetizer',
+        popularity: 4,
+        rating: 9,
+        tags: ['vegetable', 'healthy'],
+    },
+    {
+        name:'spaghetti', 
+        price: 2.5,
+        category: 'entree',
+        popularity: 9,
+        rating: 9,
+        tags: ['family', 'economical', 'popular'] ,
+    },
+]
 
 
 
@@ -176,7 +250,16 @@ let foodArr = [burger, chxSando, macNCheese, fries, chxTenders]
 
 //CODE HERE
 
-let filteredFood = foodArr.filter(foodArr, i) => callbackFunc((filteredFood, i))
+// My Code
+// let filteredFood = foodArr.filter(foodArr, i) => callbackFunc((filteredFood, i))
+
+// Correct Code
+function callback(element) {
+    return element.tags.includes('popular')
+}
+
+let filteredFood = foodArr.filter(callback)
+console.log(filteredFood)
 
 
 
@@ -212,14 +295,26 @@ let filteredFood = foodArr.filter(foodArr, i) => callbackFunc((filteredFood, i))
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type is `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
     
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+//CODE HERE // didn't even attempt
+
+// Correct Code
+let filterByProperty = function(property, number, type) {
+    let filteredArr = foodArr.filter((element) => {
+        if (type === 'above') {
+            return element[property] > number
+        } else if (type === 'below') {
+            return element[property] < number
+        }
+    })
+    return filteredArr
+}
 
 
 /*
@@ -230,3 +325,4 @@ let filteredFood = foodArr.filter(foodArr, i) => callbackFunc((filteredFood, i))
 */
 
 //CODE HERE
+console.log(filterByProperty('popularity', 4, 'below'))
