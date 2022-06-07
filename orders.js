@@ -29,13 +29,15 @@
     stored on the object.
 */
 
-//CODE HERE
+// Corrections in code
+
 class Ticket {
     constructor(items, orderTime, customerId) {
         this.items = items
         this.orderTime = orderTime
         this.customerId = customerId
-        let status = 'queued'
+        // let status = 'queued' corrected vvvv         Correction
+        this.status = 'queued'
     }
 
     updateStatus(newStatus) {

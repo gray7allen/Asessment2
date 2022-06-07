@@ -97,7 +97,7 @@ let empTwo = {...empOne, name: 'Nick'};
     the employees array. 
 */
 
-//CODE HERE
+// Corrections in Code
 
 class Manager extends Employee {
     constructor(name, shifts, employees) {
@@ -111,9 +111,10 @@ class Manager extends Employee {
     }
 
     addEmployee(emp) {
-        let employees = []
-        employees.push(emp)
-        return employees
+        // let employees = []
+        // employees.push(emp)
+        // return employees         corrected vvvvv Corrections
+        this.employees.push(emp)
     }
 }
 

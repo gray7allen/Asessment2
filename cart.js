@@ -35,8 +35,15 @@ const cart = [
 
 //CODE HERE
 
-const summedPrice = cart.reduce((price, i))
-console.log(summedPrice)
+// My Code
+// const summedPrice = cart.reduce((price, i))
+// console.log(summedPrice)
+
+function callbackFunc(prevValue, currentValue) {
+    return prevValue + currentValue.price
+}
+
+let summedPrice = cart.reduce(callbackFunc, 0)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,12 +61,17 @@ console.log(summedPrice)
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
-function calcFinalPrice(cartTotal, couponValue, tax) {
-    let tax = .06 + 1
-    let cartTotal = (cartTotal * tax) - couponValue
-}
+// My Code
+// function calcFinalPrice(cartTotal, couponValue, tax) {
+//     let tax = .06 + 1                                     // not needed
+//     let cartTotal = (cartTotal * tax) - couponValue       // need return
+// }
 
+// Correct Code
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    let cartTotal = (cartTotal * tax) - couponValue
+    return cartTotal
+}
 
 //////////////////PROBLEM 3////////////////////
 /*  
